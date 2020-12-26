@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#888282"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textViewPlayOriginal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:text="Play Original"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toStartOf="@+id/textViewVocalRemoval"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/playVocalRemovalButton" />
+
+    <TextView
+        android:id="@+id/textViewStop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="70dp"
+        android:text="Stop"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textViewVocalRemoval"
+        app:layout_constraintTop_toBottomOf="@+id/playVocalRemovalButton" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="290dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/image2" />
+
+    <TextView
+        android:id="@+id/audioInfoTextView"
+        android:layout_width="300dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="20dp"
+        android:text="AudioInfo"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <ImageView
+        android:id="@+id/playVocalRemovalButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="25dp"
+        android:onClick="startRemoveVocalPlaying"
+        app:layout_constraintEnd_toStartOf="@+id/stopButton"
+        app:layout_constraintStart_toEndOf="@+id/playOriginalButton"
+        app:layout_constraintTop_toBottomOf="@+id/audioInfoTextView"
+        app:srcCompat="@drawable/ic_baseline_volume_off_24" />
+
+    <ImageView
+        android:id="@+id/playOriginalButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="25dp"
+        android:onClick="startPlaying"
+        app:layout_constraintEnd_toStartOf="@+id/playVocalRemovalButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/audioInfoTextView"
+        app:srcCompat="@drawable/ic_baseline_play_arrow_24" />
+
+    <ImageView
+        android:id="@+id/stopButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="50dp"
+        android:onClick="stopPlaying"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/playVocalRemovalButton"
+        app:layout_constraintTop_toBottomOf="@+id/audioInfoTextView"
+        app:srcCompat="@drawable/ic_baseline_stop_24" />
+
+    <TextView
+        android:id="@+id/textViewVocalRemoval"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="30dp"
+        android:text="Remove Vocal"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toStartOf="@+id/textViewStop"
+        app:layout_constraintStart_toEndOf="@+id/textViewPlayOriginal"
+        app:layout_constraintTop_toBottomOf="@+id/playVocalRemovalButton" />
+</androidx.constraintlayout.widget.ConstraintLayout>
